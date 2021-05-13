@@ -1,0 +1,12 @@
+#pragma once
+
+// clang-format off
+
+// version
+#define SNAKE_VERSION_MAJOR @foxspace_VERSION_MAJOR@
+#define SNAKE_VERSION_MINOR @foxspace_VERSION_MINOR@
+#define SNAKE_VERSION_PATCH @foxspace_VERSION_PATCH@
+// complete version string
+#define SNAKE_VERSION_STRING "V@foxspace_VERSION_MAJOR@.@foxspace_VERSION_MINOR@.@foxspace_VERSION_PATCH@"
+
+#define SNAKE_HOMEPAGE_URL "@foxspace_HOMEPAGE_URL@"

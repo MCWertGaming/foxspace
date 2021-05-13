@@ -1,12 +1,12 @@
-# FOX NAMESPACE
+# FOX (NAME)SPACE
 Yet another opensource C++ library for every day developing. A rewrite of the [FOLF-namespace](https://github.com/FOLF-projects/folf-namespace) developed by Myself and a friend of mine.
 
 # Whats inside?
 FOX provides many functions for universal usage. It's split into multiple headers to make it easier to integrate. FOLF currently provides:
 
-- consoleOperations.h
+- calc.hpp
     - provides functions for manipulating the console on various plattforms
-- numberOperations.h
+- math.hpp
     - provides functions for manipulating numbers
 - more comming soon
 
@@ -18,8 +18,8 @@ FOX provides many functions for universal usage. It's split into multiple header
     - Unix (OpenBSD)
     - Linux (armv7, armv8a)
 
-# use FOX in your own project
-Move FOX's source into your project directory (src/fox as example).
+# use foxspace in your own project
+Move foxspace's source into your project directory (src/fox as example).
 Now just unclude this inside your CMakeLists.txt
 
 ```
@@ -27,10 +27,10 @@ add_subdirectory("${PROJECT_SOURCE_DIR}/src/fox/")
 project(your-project path/to/your/source ${fox-source})
 ```
 That's it! Now you can just include the headers inside your source files
-#### Please note, that using C++20 is highly recommended (especially when using FOX)
+#### Please note, that using C++20 is highly recommended (especially when using foxspace)
 
 # ways to contribute
-Just provide feedback, or extend FOX-namespace via pull-request
+Just provide feedback, or extend foxspace via pull-request
 
 # License
-FOX is licensed under [MIT](https://placeholder.invalid)
+Foxspace is licensed under [MIT](https://placeholder.invalid)
