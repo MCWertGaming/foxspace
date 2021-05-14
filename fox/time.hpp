@@ -1,6 +1,6 @@
 namespace Fox {
 // waits the given time before continuing
-void sleep_for();
+void sleep_for(unsigned int);
 // returns a std::chrono time point in milliseconds
 unsigned int get_timepoint();
 

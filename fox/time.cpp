@@ -2,8 +2,8 @@
 #include <fox/time.hpp>
 #include <thread>
 
-void Fox::sleep_for() {
-    std::this_thread::sleep_for(std::chrono::milliseconds(70));
+void Fox::sleep_for(unsigned int ms_duration) {
+    std::this_thread::sleep_for(std::chrono::milliseconds(ms_duration));
 }
 unsigned int Fox::get_timepoint() {
     return std::chrono::time_point_cast<std::chrono::milliseconds>(
