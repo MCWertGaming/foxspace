@@ -12,12 +12,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run clang-format in the fox folder
-      uses: jidicula/clang-format-action@v3.3.0
+      uses: jidicula/clang-format-action@v3.4.0
       with:
         clang-format-version: '11'
         check-path: 'fox'
     - name: Run clang-format in the tests folder
-      uses: jidicula/clang-format-action@v3.3.0
+      uses: jidicula/clang-format-action@v3.4.0
       with:
         clang-format-version: '11'
         check-path: 'tests'
