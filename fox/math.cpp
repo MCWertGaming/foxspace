@@ -1,14 +1,20 @@
 #include <fox/math.hpp>
 #include <fox/time.hpp>
 #include <random>
+#include <stdexcept>
 
 unsigned int Fox::get_randomNumber(unsigned int maxNum) {
-    unsigned long long randomNumber;
+    unsigned int randomNumber;
     do {
         // make the generator ready
         std::mt19937_64 generator(get_timepoint());
+        // generate number
         randomNumber = generator() % (maxNum + 1);
     } while (randomNumber == 0);
+
+    // throws a runtime_error if the generated number is bigger than expected
+    if (randomNumber > maxNum)
+        throw "randomNumber in Fox::randomNumber() is higher than expected";
 
     return randomNumber - 1;
 }
