@@ -6,3 +6,6 @@
 BasedOnStyle: Chromium
 Language: Cpp
 IndentWidth: 4
+BreakBeforeBraces: Custom
+BraceWrapping:
+  BeforeElse: true
