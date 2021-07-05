@@ -8,13 +8,14 @@ project(foxspace
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
 
-option(FOXSPACE_BUILD_EXAMPLES "Enables building of examples" ON)
+# option(FOXSPACE_BUILD_EXAMPLES "Enables building of examples" ON)
 option(FOXSPACE_ENABLE_TESTING "Enables building of unit testing targets" ON)
 
 add_subdirectory(fox)
 
 if (FOXSPACE_ENABLE_TESTING)
     # enable unit testing
+    include(CTest)
     enable_testing()
     # add tests
     add_subdirectory(tests)
