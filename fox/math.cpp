@@ -4,12 +4,26 @@
 #include <stdexcept>
 
 unsigned int Fox::get_randomNumber(unsigned int maxNum) {
-    unsigned int randomNumber;
+    
+    // fixes random number from 0 to 0
+    if (maxNum == 0)
+        return 0;
+    
+    unsigned int randomNumber = 0;
+    unsigned int iteration = 0;
+    
+    // make the generator ready
+    std::mt19937_64 generator(get_timepoint());
+    
     do {
-        // make the generator ready
-        std::mt19937_64 generator(get_timepoint());
         // generate number
         randomNumber = generator() % (maxNum + 1);
+
+        // fixes endless loop if no good random number was generated
+        if (iteration > 3000)
+            throw "Couldn't get a good random number in Fox::randomNumber() after 50 tries.";
+        iteration++;
+
     } while (randomNumber == 0);
 
     // throws a runtime_error if the generated number is bigger than expected
