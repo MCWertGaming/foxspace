@@ -25,4 +25,4 @@ jobs:
       
       - name: run tests
         run: |
-          ctest
+          .ci/test.bat
