@@ -35,7 +35,8 @@ unsigned int Fox::is_prime(unsigned int number) {
     // defining the two three numbers so they can be skipped in the next step
     if (number == 0 || number == 1)
         return false;
-    // defining the 2 as it would otherwise be returned as even (as it's the only even prime)
+    // defining the 2 as it would otherwise be returned as even (as it's the
+    // only even prime)
     else if (number == 2)
         return true;
     // sorting out all numbers that are even
