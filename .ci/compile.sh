@@ -34,3 +34,6 @@ export CXX=/usr/bin/clang++
 CLEANUP
 cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Debug
+
+# run tests
+ctest
