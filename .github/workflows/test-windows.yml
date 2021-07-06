@@ -21,7 +21,7 @@ jobs:
 
       - name: compile
         run: |
-          .ci\compile.bat
+          .ci\compile.ps1
       
       - name: run tests
         run: |
