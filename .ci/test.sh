@@ -1,0 +1,2 @@
+# run unit tests
+ctest

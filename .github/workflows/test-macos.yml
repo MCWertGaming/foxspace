@@ -33,4 +33,4 @@ jobs:
       
       - name: run tests
         run: |
-          bash ctest
+         bash .ci/test.sh 
