@@ -11,26 +11,26 @@ CLEANUP()
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
 CLEANUP
-#cmake -DCMAKE_INSTALL_PREFIX=./inst .
+cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Debug
 
 # compile gcc release
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
 CLEANUP
-#cmake -DCMAKE_INSTALL_PREFIX=./inst .
+cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Release
 
 # compile clang debug
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 CLEANUP
-#cmake -DCMAKE_INSTALL_PREFIX=./inst .
+cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Debug
 
 # compile clang release
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 CLEANUP
-#cmake -DCMAKE_INSTALL_PREFIX=./inst .
+cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Release
