@@ -4,17 +4,16 @@
 #include <stdexcept>
 
 unsigned int Fox::get_randomNumber(unsigned int maxNum) {
-    
     // fixes random number from 0 to 0
     if (maxNum == 0)
         return 0;
-    
+
     unsigned int randomNumber = 0;
     unsigned int iteration = 0;
-    
+
     // make the generator ready
     std::mt19937_64 generator(get_timepoint());
-    
+
     do {
         // generate number
         randomNumber = generator() % (maxNum + 1);
@@ -58,7 +57,8 @@ unsigned int Fox::prime_sum(unsigned int max_number) {
 
     // start with value 2
     unsigned int sum = 2;
-    // tests every second number to be a prime (the skiped number is always a divisor of 2)
+    // tests every second number to be a prime (the skiped number is always a
+    // divisor of 2)
     for (unsigned int i = 3; i <= max_number; i += 2) {
         // testPrime returns true, if the given number is a Prime
         if (is_prime(i)) {
