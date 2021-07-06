@@ -21,4 +21,8 @@ jobs:
 
       - name: compile
         run: |
-          bash .ci\compile.bat
+          .ci\compile.bat
+      
+      - name: run tests
+        run: |
+          ctest
