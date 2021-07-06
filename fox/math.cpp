@@ -35,12 +35,19 @@ unsigned int Fox::is_prime(unsigned int number) {
     // defining the two three numbers so they can be skipped in the next step
     if (number == 0 || number == 1)
         return false;
+    // defining the 2 as it would otherwise be returned as even (as it's the
+    // only even prime)
+    else if (number == 2)
+        return true;
+    // sorting out all numbers that are even
+    else if (number % 2 == 0)
+        return false;
 
     // taking the square root to speed up the calculation and place the result
     // into another variable to save more time (seems like c++ calculates the
     // sqrt on every loop otherwise)
     double root = sqrt((double)number);
-    for (int i = 2; i <= root; i++) {
+    for (int i = 3; i <= root; i += 2) {
         // result of 0 means its not a prime = it can be devised through another
         // number except 0 and himself
         if (number % i == 0) {
