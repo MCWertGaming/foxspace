@@ -30,8 +30,20 @@ TEST(math_test, is_prime) {
     EXPECT_FALSE(Fox::is_prime(9));
     EXPECT_FALSE(Fox::is_prime(10));
     EXPECT_TRUE(Fox::is_prime(11));
+    EXPECT_FALSE(Fox::is_prime(12));
+    EXPECT_TRUE(Fox::is_prime(13));
+    EXPECT_FALSE(Fox::is_prime(14));
+    EXPECT_FALSE(Fox::is_prime(15));
+    EXPECT_FALSE(Fox::is_prime(16));
+    EXPECT_TRUE(Fox::is_prime(17));
+    EXPECT_FALSE(Fox::is_prime(18));
+    EXPECT_TRUE(Fox::is_prime(19));
+    EXPECT_FALSE(Fox::is_prime(20));
+    EXPECT_FALSE(Fox::is_prime(21));
+    EXPECT_FALSE(Fox::is_prime(22));
+    EXPECT_TRUE(Fox::is_prime(23));
     EXPECT_TRUE(Fox::is_prime(4019));
-    EXPECT_TRUE(Fox::is_prime(7910));
+    EXPECT_TRUE(Fox::is_prime(7919));
     EXPECT_TRUE(Fox::is_prime(999331));
 }
 TEST(math_test, prime_sum) {
@@ -41,4 +53,5 @@ TEST(math_test, prime_sum) {
     EXPECT_EQ(Fox::prime_sum(3), 5);
     EXPECT_EQ(Fox::prime_sum(4), 5);
     EXPECT_EQ(Fox::prime_sum(31), 160);
+    EXPECT_EQ(Fox::prime_sum(10000000), 3574358836);
 }
