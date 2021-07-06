@@ -1,1 +1,1 @@
-ctest
+ctest -C Release
