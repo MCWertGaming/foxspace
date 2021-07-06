@@ -25,4 +25,4 @@ jobs:
       
       - name: run tests
         run: |
-          .ci/test.bat
+          .ci/test.ps1
