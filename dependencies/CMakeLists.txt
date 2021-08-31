@@ -16,7 +16,7 @@ endif(GTest_FOUND)
 if (Git_FOUND AND NOT GTest_FOUND)
     message(STATUS "Using git submodule for google test")
     # initialising google test git sub module at {project_folder}/dependencies/gtest
-    execute_process(COMMAND ${GIT_EXECUTABLE} submodule init dependencies/gtest WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} RESULT_VARIABLE GIT_SUBMOD_RESULT)
+    execute_process(COMMAND ${GIT_EXECUTABLE} submodule update --init dependencies/gtest WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} RESULT_VARIABLE GIT_SUBMOD_RESULT)
 elseif(NOT Git_FOUND AND NOT GTest_FOUND)
     # prints an error if neither google test or git is installed
     message(FATAL_ERROR "No installed version of google test or git found! Please install one in order to build foxspace's unit testing")

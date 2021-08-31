@@ -1,7 +1,7 @@
 // testing of math.hpp of the foxspace library
 
 #include <gtest/gtest.h>
-#include <fox/math.hpp>
+#include <foxspace/math.hpp>
 
 TEST(math_test, get_randomNumber) {
     EXPECT_EQ(Fox::get_randomNumber(0), 0);

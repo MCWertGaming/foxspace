@@ -1,7 +1,7 @@
 // testing of time.hpp of the foxspace library
 
 #include <gtest/gtest.h>
-#include <fox/time.hpp>
+#include <foxspace/time.hpp>
 
 TEST(time_test, sleep_for) {
     EXPECT_NO_THROW(Fox::sleep_for(1));
