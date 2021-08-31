@@ -8,7 +8,7 @@ set(FOXSPACE_SOURCES math.cpp time.cpp)
 add_library(foxspace ${FOXSPACE_SOURCES})
 target_include_directories(foxspace PUBLIC ${PROJECT_SOURCE_DIR} ${PROJECT_BINARY_DIR})
 set_target_properties(foxspace PROPERTIES
-    PUBLIC_HEADER "fox/math.hpp;fox/time.hpp;fox/info.hpp")
+    PUBLIC_HEADER "foxspace/math.hpp;foxspace/time.hpp;foxspace/info.hpp")
 
 # enable warnings and set compile features
 foreach(target foxspace)
