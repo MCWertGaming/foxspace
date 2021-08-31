@@ -1,5 +1,5 @@
 #include <chrono>
-#include <fox/time.hpp>
+#include <foxspace/time.hpp>
 #include <thread>
 
 void Fox::sleep_for(unsigned int ms_duration) {

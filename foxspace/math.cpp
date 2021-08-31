@@ -1,5 +1,5 @@
-#include <fox/math.hpp>
-#include <fox/time.hpp>
+#include <foxspace/math.hpp>
+#include <foxspace/time.hpp>
 #include <random>
 #include <stdexcept>
 

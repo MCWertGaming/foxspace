@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED true)
 option(FOXSPACE_ENABLE_TESTING "Enables building of unit testing targets" ON)
 option(FOXSPACE_ENABLE_INSTALL "Enables install generation of foxspace" ON)
 
-add_subdirectory(fox)
+add_subdirectory(foxspace)
 
 if (FOXSPACE_ENABLE_TESTING)
     # enable unit testing
@@ -32,9 +32,9 @@ if (FOXSPACE_ENABLE_INSTALL)
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
         ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-        INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
-        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
-        PRIVATE_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+        INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/foxspace
+        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/foxspace
+        PRIVATE_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/foxspace
     )
     include(CMakePackageConfigHelpers)
     write_basic_package_version_file(
