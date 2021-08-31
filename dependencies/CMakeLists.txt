@@ -19,13 +19,16 @@ if (Git_FOUND AND NOT GTest_FOUND)
     execute_process(COMMAND ${GIT_EXECUTABLE} submodule update --init dependencies/gtest WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} RESULT_VARIABLE GIT_SUBMOD_RESULT)
 elseif(NOT Git_FOUND AND NOT GTest_FOUND)
     # prints an error if neither google test or git is installed
-    message(FATAL_ERROR "No installed version of google test or git found! Please install one in order to build foxspace's unit testing")
+    message(WARNING "No installed version of google test or git found! Please install one in order to build foxspace's unit testing")
 endif(Git_FOUND AND NOT GTest_FOUND)
 
 # check for git failture and include the sub module directory on success
 if(GIT_SUBMOD_RESULT EQUAL "0")
     message(STATUS "Google test git sub module sucessfully initialised")
-    add_subdirectory(gtest)
-elseif(NOT GIT_SUBMOD_RESULT EQUAL "0" AND NOT GTest_FOUND)
+elseif(NOT GIT_SUBMOD_RESULT EQUAL "0" AND NOT GTest_FOUND AND Git_FOUND)
     message(FATAL_ERROR "Initialisation of the google test sub module failed! Please check if your git installation is working correctly")
 endif(GIT_SUBMOD_RESULT EQUAL "0")
+
+if (NOT GTest_FOUND)
+    add_subdirectory(gtest)
+endif(NOT GTest_FOUND)
