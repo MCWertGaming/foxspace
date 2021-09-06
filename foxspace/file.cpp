@@ -18,9 +18,12 @@ void Fox::create_directory(std::string& path)
 //     // TODO: test what happens if no home directory exists
 void Fox::create_directory(std::string path)
 {
-    if (!std::filesystem::create_directories(path))
+    if (!std::filesystem::is_directory(path))
     {
-        throw std::runtime_error("Fox::create_directory() failed to create directory.");
+        if (!std::filesystem::create_directories(path))
+        {
+            throw std::runtime_error("Fox::create_directory() failed to create directory.");
+        }
     }
 }
 void Fox::create_file(std::string& path)
