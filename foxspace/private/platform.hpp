@@ -1,8 +1,9 @@
 #pragma once
-
-#include <unistd.h>
 #include <cstdlib>
 #include <string>
+#if not defined(_WIN32)
+#include <unistd.h>
+#endif
 
 namespace Fox::Private {
 // returns the local user directory as string
