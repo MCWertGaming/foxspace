@@ -2,13 +2,13 @@
 configure_file(info.hpp.in info.hpp)
 
 # a list of all source files
-set(FOXSPACE_SOURCES math.cpp time.cpp)
+set(FOXSPACE_SOURCES math.cpp time.cpp file.cpp checks.cpp)
 
 # create a compile target for foxspace
 add_library(foxspace ${FOXSPACE_SOURCES})
 target_include_directories(foxspace PUBLIC ${PROJECT_SOURCE_DIR} ${PROJECT_BINARY_DIR})
 set_target_properties(foxspace PROPERTIES
-    PUBLIC_HEADER "foxspace/math.hpp;foxspace/time.hpp;foxspace/info.hpp")
+    PUBLIC_HEADER "foxspace/math.hpp;foxspace/time.hpp;foxspace/info.hpp;foxspace/file.hpp;foxspace/checks.hpp")
 
 # enable warnings and set compile features
 foreach(target foxspace)
