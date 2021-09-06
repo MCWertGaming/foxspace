@@ -1,0 +1,2 @@
+add_executable(show_informations show_informations.cpp)
+target_link_libraries(show_informations foxspace)
