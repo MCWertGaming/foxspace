@@ -9,7 +9,7 @@ void Fox::create_directory(std::string& path)
 {
     if (!std::filesystem::create_directories(path))
     {
-        std::runtime_error("Fox::create_directory() failed to create directory.");
+        throw std::runtime_error("Fox::create_directory() failed to create directory.");
     }
 }
 //     // TODO: only create it when it does not exist
@@ -20,14 +20,14 @@ void Fox::create_directory(std::string path)
 {
     if (!std::filesystem::create_directories(path))
     {
-        std::runtime_error("Fox::create_directory() failed to create directory.");
+        throw std::runtime_error("Fox::create_directory() failed to create directory.");
     }
 }
 void Fox::create_file(std::string& path)
 {
     // create directory to file
     if(!std::filesystem::create_directories(path))
-        std::runtime_error("Fox::create_file() couldn't create directory.");
+        throw std::runtime_error("Fox::create_file() couldn't create directory.");
     // create empty file
     std::fstream file;
     file.open(path);
