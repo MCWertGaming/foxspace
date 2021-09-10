@@ -8,7 +8,7 @@
 namespace Fox::Private {
 // returns the local user directory as string
 inline std::string getUserConfigDir() {
-#if defined(__WIN32)
+#if defined(_WIN32)
     // TODO test
     return std::getenv("APPDATA");
 #else
