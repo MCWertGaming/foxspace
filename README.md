@@ -1,8 +1,10 @@
-# FOX (NAME)SPACE
+![foxspace logo](/logo2.png)
+
+# FOXSPACE
 Yet another opensource C++ library for every day developing. A rewrite of the [FOLF-namespace](https://github.com/FOLF-projects/folf-namespace) developed by Myself and a friend of mine.
 
 # Whats inside?
-FOX provides many functions for universal usage. It's split into multiple headers to make it easier to integrate. FOLF currently provides:
+Foxspace provides many functions for universal usage. It's split into multiple headers to make it easier to integrate. FOLF currently provides:
 
 - calc.hpp
     - provides functions for manipulating the console on various plattforms
