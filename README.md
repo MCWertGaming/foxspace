@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MCWertGaming/foxspace/icon/logo.svg" alt="Foxspace logo"/>
+  <img src="https://raw.githubusercontent.com/MCWertGaming/foxspace/main/logo.svg" alt="Foxspace logo"/>
 </p>
 
 Yet another opensource C++ library for every day developing. A rewrite of the [FOLF-namespace](https://github.com/FOLF-projects/folf-namespace) developed by Myself and a friend of mine.
