@@ -1,4 +1,4 @@
-![foxspace logo](/logo2.png)
+![foxspace logo](https://github.com/MCWertGaming/foxspace/blob/icon/logo.png)
 
 # FOXSPACE
 Yet another opensource C++ library for every day developing. A rewrite of the [FOLF-namespace](https://github.com/FOLF-projects/folf-namespace) developed by Myself and a friend of mine.
