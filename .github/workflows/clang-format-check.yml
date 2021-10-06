@@ -17,7 +17,7 @@ jobs:
         clang-format-version: '12'
         check-path: 'fox'
     - name: Run clang-format in the tests folder
-      uses: mcwertgaming/clang-format-action@docker-fix
+      uses: mcwertgaming/clang-format-action@dockerFix
       with:
         clang-format-version: '12'
         check-path: 'tests'
