@@ -4,17 +4,9 @@
 #include <filesystem>
 #include <fstream>
 
-void Fox::create_directory(std::string& path) {
-    if (!std::filesystem::create_directories(path)) {
-        throw std::runtime_error(
-            "Fox::create_directory() failed to create directory.");
-    }
-}
-//     // TODO: only create it when it does not exist
 //     // TODO: measure permissions
-//     // TODO: move to foxspace
 //     // TODO: test what happens if no home directory exists
-void Fox::create_directory(std::string path) {
+void Fox::create_directory(const char* path) {
     if (!std::filesystem::is_directory(path)) {
         if (!std::filesystem::create_directories(path)) {
             throw std::runtime_error(
@@ -22,7 +14,7 @@ void Fox::create_directory(std::string path) {
         }
     }
 }
-void Fox::create_file(std::string& path) {
+void Fox::create_file(const char* path) {
     // create directory to file
     if (!std::filesystem::create_directories(path))
         throw std::runtime_error(
@@ -33,12 +25,12 @@ void Fox::create_file(std::string& path) {
     file.close();
 }
 
-std::string Fox::get_user_config_folder() {
+const char* Fox::get_user_config_folder() {
     return Private::getUserConfigDir();
 }
-std::string Fox::get_user_config_folder(const char* path) {
-    std::string full_path = Private::getUserConfigDir();
-    // TODO into one line?
-    full_path.append("/").append(path);
-    return full_path;
+const char* Fox::get_user_config_folder(const char* path) {
+    return ((std::string)Private::getUserConfigDir())
+        .append("/")
+        .append(path)
+        .c_str();
 }
