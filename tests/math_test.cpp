@@ -45,6 +45,7 @@ TEST(math_test, is_prime) {
     EXPECT_TRUE(Fox::is_prime(4019));
     EXPECT_TRUE(Fox::is_prime(7919));
     EXPECT_TRUE(Fox::is_prime(999331));
+    EXPECT_FALSE(Fox::is_prime(UINT32_MAX));
 }
 TEST(math_test, prime_sum) {
     EXPECT_EQ(Fox::prime_sum(0), 0);
@@ -53,5 +54,6 @@ TEST(math_test, prime_sum) {
     EXPECT_EQ(Fox::prime_sum(3), 5);
     EXPECT_EQ(Fox::prime_sum(4), 5);
     EXPECT_EQ(Fox::prime_sum(31), 160);
-    EXPECT_EQ(Fox::prime_sum(10000000), 3574358836);
+    EXPECT_EQ(Fox::prime_sum(10000000), 3203324994356);
+    // EXPECT_EQ(Fox::prime_sum(UINT32_MAX), XXX);
 }
