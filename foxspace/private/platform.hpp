@@ -7,11 +7,11 @@
 
 namespace Fox::Private {
 // returns the local user directory as string
-inline const char* getUserConfigDir() {
+inline std::string getUserConfigDir() {
 #if defined(_WIN32)
     return std::getenv("APPDATA");
 #else
-    return ((std::string)std::getenv("HOME")).append("/.config").c_str();
+    return ((std::string)std::getenv("HOME")).append("/.config");
 #endif
 }
 inline bool is_user_root() {
