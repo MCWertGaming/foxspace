@@ -26,11 +26,9 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
-      
       - name: compile
         run: |
           bash .ci/compile.sh
-      
       - name: run tests
         run: |
          bash .ci/test.sh 

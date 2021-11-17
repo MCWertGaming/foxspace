@@ -14,15 +14,12 @@ jobs:
 
     steps:
       - name: checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.4.0
         with:
           submodules: true
-          fetch-depth: 0
-      
       - name: compile
         run: |
           bash .ci/compile.sh
-      
       - name: run tests
         run: |
          bash .ci/test.sh 
