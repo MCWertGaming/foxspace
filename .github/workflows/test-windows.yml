@@ -14,15 +14,13 @@ jobs:
 
     steps:
       - name: checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.4.0
         with:
           submodules: true
           fetch-depth: 0
-
       - name: compile
         run: |
           .ci\compile.ps1
-      
       - name: run tests
         run: |
           .ci/test.ps1
